@@ -31,6 +31,46 @@
       </div>
     </div>
 <!-- InstanceEndEditable --><!-- InstanceBeginEditable name="EditRegion4" -->
+<script language="javascript">
+	function KiemTra()
+	{
+		
+		var Tendangnhap=document.getElementById("tendangnhap");
+		if(Tendangnhap.value=="")
+		{
+			alert("Vui lòng nhập tên tài khoản!!");
+			Tendangnhap.focus();
+			return false;
+		}
+		var Matkhaucu=document.getElementById("matkhaucu");
+		if(Matkhaucu.value=="")
+		{
+			alert("Vui lòng nhập mật khẩu cũ!!");
+			Matkhaucu.focus();
+			return false;
+		}
+		var Matkhaumoi=document.getElementById("matkhaumoi");
+		if(Matkhaumoi.value=="")
+		{
+			alert("Vui lòng nhập mật khẩu mới!!");
+			Matkhaumoi.focus();
+			return false;
+		}
+		var Nhaplaimatkhaumoi=document.getElementById("nhaplaimatkhaumoi");
+		if(Nhaplaimatkhaumoi.value=="")
+		{
+			alert("Vui lòng nhập lại mật khẩu mới!!");
+			Nhaplaimatkhaumoi.focus();
+			return false;
+		}
+		if(Nhaplaimatkhaumoi.value!=Matkhaumoi.value)
+		{
+			alert("Mặt khẩu nhập lại không khớp!!");
+			Nhaplaimatkhaumoi.focus();
+			return false;
+		}
+	}
+</script>
 	<div class="login">
     <form >
         <table>
@@ -39,22 +79,22 @@
               </tr>
               <tr>
                 <td>Têm đăng nhập:</td>
-                <td><input  class="user" type="text" placeholder="Nhập tên tài khoản..." required></td>
+                <td><input id="tendangnhap" class="user" type="text" placeholder="Nhập tên tài khoản..." required></td>
               </tr>
               <tr>
                 <td>Mậu khẩu cũ:</td>
-                <td><input class="pass"  type="password" placeholder="Nhập mật khẩu cũ..." required></td>
+                <td><input id="matkhaucu" class="pass"  type="password" placeholder="Nhập mật khẩu cũ..." required></td>
               </tr>
               <tr>
                 <td>Mậu khẩu mới:</td>
-                <td><input class="pass"  type="password" placeholder="Nhập mật khẩu mới..." required></td>
+                <td><input id="matkhaumoi" class="pass"  type="password" placeholder="Nhập mật khẩu mới..." required></td>
               </tr>
               <tr>
                 <td>Nhập lại mậu khẩu mới:</td>
-                <td><input class="pass"  type="password" placeholder="Nhập mật khẩu mới..." required></td>
+                <td><input id="nhaplaimatkhaumoi" class="pass"  type="password" placeholder="Nhập mật khẩu mới..." required></td>
               </tr>
               <tr>
-                <td colspan ="2"align ="middle"><input class="btn" type="submit" value="Đổi mật khẩu" ><input class="btn" type="reset" value="Hủy" ></td>
+                <td colspan ="2"align ="middle"><input class="btn" type="submit" value="Đổi mật khẩu" onclick="return KiemTra()"><input class="btn" type="reset" value="Hủy" ></td>
               </tr>
          </table>
     </form>

@@ -30,6 +30,26 @@
       </div>
     </div>
 <!-- InstanceEndEditable --><!-- InstanceBeginEditable name="EditRegion4" -->
+<script language="javascript">
+	function KiemTra()
+	{
+		
+		var Tendangnhap=document.getElementById("tendangnhap");
+		if(Tendangnhap.value=="")
+		{
+			alert("Vui lòng nhập tên tài khoản!!");
+			Tendangnhap.focus();
+			return false;
+		}
+		var Matkhau=document.getElementById("matkhau");
+		if(Matkhau.value=="")
+		{
+			alert("Vui lòng nhập mật khẩu!!");
+			Matkhau.focus();
+			return false;
+		}
+	}
+</script>
 	<div class="login">
     <form >
         <table>
@@ -38,14 +58,14 @@
               </tr>
               <tr>
                 <td>Têm đăng nhập:</td>
-                <td><input type="text" size="24" height="24" placeholder="Nhập tên tài khoản..."></td>
+                <td><input id="tendangnhap" type="text" size="24" height="24" placeholder="Nhập tên tài khoản..."></td>
               </tr>
               <tr>
                 <td>Mậu khẩu:</td>
-                <td><input type="password" size="24" height="24" placeholder="Nhập mật khẩu..."></td>
+                <td><input id="matkhau" type="password" size="24" height="24" placeholder="Nhập mật khẩu..."></td>
               </tr>
               <tr>
-                <td colspan ="2"align ="middle"><input class="dn" type="submit" value="Đăng Nhập" ></td>
+                <td colspan ="2"align ="middle"><input class="dn" type="submit" value="Đăng Nhập" onClick="return KiemTra()"></td>
               </tr>
               <tr>
                 <td colspan="2" align ="right" type="submit"><a href="DoiMatKhau.html">Đổi Mật Khẩu</a></td>
